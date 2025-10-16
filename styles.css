@@ -7,8 +7,24 @@ body{
     
 }
 
+button{
+    cursor: pointer;
+}
+
 .add-book-btn{
     margin: 25px auto;
+    background-color: #006A71;
+    color: #F2EFE7;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.remove{
+    background-color: #f44444;
     
 }
 
@@ -36,8 +52,34 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 315px;
     border: solid 2px #006A71;
     border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-info{
+    border: 2px solid #006A71;
+    width: 175px;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+#read, #not-read, .remove{
+    color: #F2EFE7;
+    border: none;
+    border-radius: 3px;
+    width: 175px;
+    padding: 5px 10px;
+    
+}
+
+#read{
+    background-color: #006A71;
+}
+
+#not-read{
+    background-color: grey;
 }
