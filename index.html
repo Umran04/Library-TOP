@@ -15,17 +15,19 @@
     <dialog id="book-modal" class="book-modal">
         <form id="book-form" class="book-form-card">
             <label for="book">Book:</label>
-            <input id="book" name="book" type="text" placeholder="Inspector Calls"/>
+            <input id="book" name="book" type="text" placeholder="Inspector Calls" required/>
 
             <label for="author">Author:</label>
-            <input id="author" name="author"type="text" placeholder="J.B Preistley"/>
+            <input id="author" name="author"type="text" placeholder="J.B Preistley" required/>
 
             <label for="pages">Pages:</label>
-            <input id="pages" name="pages" type="number" placeholder="30"/>
+            <input id="pages" name="pages" type="number" placeholder="30" required/>
+
+            <button type="button" id="m-read">Not Read</button>
 
 
-            <button type="button" id="add-btn">Add</button>
-            <button type="button" id="cancel-btn">Cancel</button>
+            <button type="submit" id="add-modal-btn">Add</button>
+            <button type="button" id="cancel-modal-btn">Cancel</button>
         </form>
 
 

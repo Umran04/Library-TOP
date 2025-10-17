@@ -44,7 +44,7 @@ h1{
     flex-wrap: wrap;
     gap: 25px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .book-card{
@@ -59,13 +59,32 @@ h1{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+#read, #not-read, .remove{
+    color: #F2EFE7;
+    border: none;
+    border-radius: 3px;
+    width: 175px;
+    padding: 5px 10px;
+    
+}
+
+#read, #m-read{
+    background-color: #006A71;
+}
+
+#not-read, #m-read{
+    background-color: grey;
+}
+
+/* MODAL AND FORM STYLES*/
+
 .book-form-card{
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: space-evenly;
     width: 250px;
-    height: 350px;
+    height: 500px;
     
 }
 
@@ -88,26 +107,25 @@ h1{
     box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.3); 
 }
 
-.book-form-card #add-btn, #cancel-btn{
+.book-form-card #add-modal-btn, #cancel-modal-btn, #m-read{
     border: none;
     border-radius: 3px;
     padding: 10px 20px;
     color: white;
 }
 
-.book-form-card #add-btn{
+.book-form-card #add-modal-btn{
     background-color: #006A71;
 }
 
-.book-form-card #cancel-btn{
+.book-form-card #cancel-modal-btn{
     background-color: #f44444;
 }
-
-
 
 .book-modal{
     border: 10px solid #006A71;
     border-radius: 5px;
+    height: 500px;
     
 }
 
@@ -119,19 +137,7 @@ h1{
     border-radius: 3px;
 }
 
-#read, #not-read, .remove{
-    color: #F2EFE7;
-    border: none;
-    border-radius: 3px;
-    width: 175px;
-    padding: 5px 10px;
-    
-}
 
-#read{
-    background-color: #006A71;
-}
 
-#not-read{
-    background-color: grey;
-}
+
+

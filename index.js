@@ -1,8 +1,13 @@
 const container = document.getElementById('container')
 const addBook = document.getElementById('add-book-btn')
-const cancelBtn = document.getElementById('cancel-btn')
+const cancelBtn = document.getElementById('cancel-modal-btn')
 const modal = document.getElementById('book-modal')
 const form = document.getElementById('book-form')
+const modalBook = document.getElementById('book')
+const modalAuthor = document.getElementById('author')
+const modalPgs = document.getElementById('pages')
+const addModal = document.getElementById('add-modal-btn')
+const mRead = document.getElementById('m-read')
 
 let myLibrary = []
 
@@ -26,9 +31,6 @@ function addBookToLibrary(title,author,numberOfPages,read){
     
   }
   
-addBookToLibrary('AOT', 'Isayama', 139, true)
-addBookToLibrary('OP', 'Oda', 1150, true)
-addBookToLibrary('JJK', 'Kishimoto', 250 , false)
 
 
 function displayBooks(){
@@ -67,11 +69,37 @@ function displayBooks(){
     
 }
 
+let readStatus = false; 
+
+mRead.addEventListener('click', () => {
+  readStatus = !readStatus;
+  mRead.textContent = readStatus ? 'Read' : 'Not Read';
+  
+  
+  
+});
+
+
+
 addBook.addEventListener('click', () =>{
     modal.showModal();
 })
 
+form.addEventListener('submit', (event)=>{
+  event.preventDefault();
+  addBookToLibrary(modalBook.value, modalAuthor.value, modalPgs.value, readStatus)
+  displayBooks();
+  modal.close();
+  readStatus = false
+  mRead.textContent = 'Not Read'
+  form.reset();
+  
+})
+
+
+
 cancelBtn.addEventListener('click', () =>{
+    form.reset();
     modal.close();
 })
 
