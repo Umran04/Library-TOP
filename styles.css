@@ -35,7 +35,7 @@ h1{
     color: #006A71;
     height: 100px;
     width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px #006A71;
 }
 
 #container{
@@ -53,10 +53,62 @@ h1{
     align-items: center;
     justify-content: space-evenly;
     width: 250px;
-    height: 315px;
+    height: 350px;
     border: solid 2px #006A71;
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-form-card{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-evenly;
+    width: 250px;
+    height: 350px;
+    
+}
+
+.book-form-card label{
+    font-size: 1.25rem;
+    font-weight: 600;
+
+}
+
+.book-form-card input{
+    padding: 10px 20px;
+    border-radius: 3px;
+    border-color: #006A71;
+   
+}
+
+.book-form-card input:focus{
+    outline: none; 
+    border-color: #006A71; 
+    box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.3); 
+}
+
+.book-form-card #add-btn, #cancel-btn{
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    color: white;
+}
+
+.book-form-card #add-btn{
+    background-color: #006A71;
+}
+
+.book-form-card #cancel-btn{
+    background-color: #f44444;
+}
+
+
+
+.book-modal{
+    border: 10px solid #006A71;
+    border-radius: 5px;
+    
 }
 
 .book-info{

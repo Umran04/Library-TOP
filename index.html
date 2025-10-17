@@ -10,7 +10,26 @@
 
     <h1>Library</h1>
 
-    <button class="add-book-btn">Add Book</button>
+    <button id="add-book-btn" class="add-book-btn">Add Book</button>
+
+    <dialog id="book-modal" class="book-modal">
+        <form id="book-form" class="book-form-card">
+            <label for="book">Book:</label>
+            <input id="book" name="book" type="text" placeholder="Inspector Calls"/>
+
+            <label for="author">Author:</label>
+            <input id="author" name="author"type="text" placeholder="J.B Preistley"/>
+
+            <label for="pages">Pages:</label>
+            <input id="pages" name="pages" type="number" placeholder="30"/>
+
+
+            <button type="button" id="add-btn">Add</button>
+            <button type="button" id="cancel-btn">Cancel</button>
+        </form>
+
+
+    </dialog>
 
     <div id="container">
 

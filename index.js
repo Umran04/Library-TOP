@@ -1,4 +1,8 @@
 const container = document.getElementById('container')
+const addBook = document.getElementById('add-book-btn')
+const cancelBtn = document.getElementById('cancel-btn')
+const modal = document.getElementById('book-modal')
+const form = document.getElementById('book-form')
 
 let myLibrary = []
 
@@ -37,9 +41,9 @@ function displayBooks(){
         card.classList.add('book-card')
 
         card.innerHTML = `
-            <h3 class="book-info" >Name: ${book.title}</h3>
+            <h3 class="book-info" >Book: ${book.title}</h3>
             <p class="book-info">Author: ${book.author}</p>
-            <p class="book-info">Pg No: ${book.numberOfPages}</p>
+            <p class="book-info">Pages: ${book.numberOfPages}</p>
             <button class="remove">Remove</button>
             <button class="toggleBtn" id=${book.read ? 'read': 'not-read'}>${book.read ? 'Read': 'Not Read'}</button>`
 
@@ -62,6 +66,14 @@ function displayBooks(){
 
     
 }
+
+addBook.addEventListener('click', () =>{
+    modal.showModal();
+})
+
+cancelBtn.addEventListener('click', () =>{
+    modal.close();
+})
 
 
 displayBooks();
